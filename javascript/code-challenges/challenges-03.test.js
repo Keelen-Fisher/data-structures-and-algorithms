@@ -40,7 +40,7 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   let onlyAnd = arr.filter(function(value, index){
-    return value === 'and';
+    return arr.indexOf(value) === 'and';
   });
   return onlyAnd;
 };
