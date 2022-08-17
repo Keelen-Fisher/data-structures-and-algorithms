@@ -8,10 +8,9 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   let newArr = [];
-  for (let i = 0; i < arr.length; i + 2){
-    newArr.push([i]);
+  for (let i = 0; i < arr.length; i++){
+    newArr.push(arr[i] + 2);
   }
-
   return newArr;
 };
 
@@ -24,7 +23,11 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const typeNum = (arr) => {
-  // Solution code here...
+  let noName = arr.filter(function(value, index){
+    return typeof value === 'number';
+  });
+  return noName;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,7 +39,10 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  // Solution code here...
+  let onlyAnd = arr.filter(function(value, index){
+    return value === 'and';
+  });
+  return onlyAnd;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,7 +54,10 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+  let oddArr = arr.filter(function(value, index){
+    return value % 2;
+  });
+  return oddArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,7 +69,10 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  let restOf = arr.filter(function(value, index){
+    return !forbiddenValues.includes(value);
+  });
+  return restOf;
 };
 
 /* ------------------------------------------------------------------------------------------------
