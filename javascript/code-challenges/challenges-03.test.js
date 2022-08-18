@@ -39,11 +39,13 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  let onlyAnd = arr.filter(function(value, index){
-    return arr.indexOf(value) === 'and';
-  });
+  let onlyAnd = arr.filter(word => word.includes('and'));
   return onlyAnd;
 };
+
+// arr.filter(function(word){
+//   return word.includes('and')
+// });
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
