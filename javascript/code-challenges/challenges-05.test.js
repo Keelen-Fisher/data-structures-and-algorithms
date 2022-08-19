@@ -126,9 +126,9 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  let nameOnly = arr.reduce(function(names, value, index){
-    names.push(value.name);
-    return names;
+  let nameOnly = arr.reduce(function(retNames, value, index){
+    retNames.push(value.name);
+    return retNames;
   },[]);
   return nameOnly;
 };
