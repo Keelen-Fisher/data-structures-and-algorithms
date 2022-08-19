@@ -62,12 +62,12 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   let elementOnly = arr.reduce(function(elemNum, value, index){
-    for (let i = 0; i < arr.length; i++){
-      return elemNum + value.i;
-    }
+    elemNum = index + 1;
+    return elemNum;
   }, 0);
   return elementOnly;
 };
+// Recieved help from: Luis Rosales
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -142,11 +142,13 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  let revString = str.reduce(function(rev, value, index){
-    return rev + value.charAt(0);
-  },0);
-  return revString;
+  let newStr = [...str];
+  return newStr.reduce((rev, value, index) => {
+    rev = newStr[index] + rev;
+    return rev;
+  }, '');
 };
+// Recieved help from: Luis Rosales
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
