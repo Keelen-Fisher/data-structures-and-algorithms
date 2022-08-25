@@ -19,7 +19,8 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
@@ -37,10 +38,10 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  if(Object.values(obj)){
+  if (Object.values(obj)) {
     return true;
   }
-  else if(! Object.values(obj)){
+  else if (!Object.values(obj)) {
     return false;
   }
 };
@@ -120,7 +121,7 @@ const characters = [
 ];
 const getHouses = (arr) => {
   if ()
-  let houses = [];
+    let houses = [];
 
   houses.push(Object.values(arr.children));
   return houses;
@@ -139,8 +140,10 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  
-
+  Object.values(character).forEach(value => 
+    {
+    return (value)
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
