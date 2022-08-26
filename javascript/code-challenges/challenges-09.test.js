@@ -1,5 +1,7 @@
 'use strict';
 
+const { hasChildren } = require("domhandler");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -38,12 +40,14 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  if (Object.values(obj)) {
-    return true;
-  }
-  else if (!Object.values(obj)) {
-    return false;
-  }
+  let checking  = Object.values(obj); 
+  let checkVal = false;
+  checking.forEach((v) => {
+    if(v === value){
+      checkVal = true;
+    }
+  });
+  return checkVal;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,7 +74,7 @@ const updateNumbers = (obj) => {
   let strangerStuff = Object.values(obj);
   let strangerArray = [];
   for (let i = 0; i < strangerThings.length; i++) {
-    strangerArray.push(strangerThings[i].toString() + ': ' + strangerStuff.toString());
+    strangerArray.push(strangerThings[i].toString() + ': ' +strangerStuff[i].toString());
   }
   return strangerArray;
 };
@@ -151,9 +155,17 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  Object.values(character).forEach(value => {
-    return (value)
+  let hasChildren = false;
+  // Loop over the array first:
+  arr.forEach((person, index) => {
+    // find the '' object.
+    if (person.name === character) {
+      let values = Object.values(person);
+      return values.some(value => Array.isArray(value) ? hasChildren = true : false);
+
+    }
   });
+  return hasChildren;
 };
 
 /* ------------------------------------------------------------------------------------------------
