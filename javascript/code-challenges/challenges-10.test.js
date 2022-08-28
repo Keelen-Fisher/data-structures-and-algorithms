@@ -10,7 +10,9 @@ Write a function named returnTen, takes in a string and uses split and splice to
 function returnTen(str){
   // Taking a string
   // uses split
+  let splitSlice = str.split('');
   // uses splice
+  return splitSlice.slice(-10);
   // returns the last 10 characters from the string as elements of an array
 }
 
@@ -30,8 +32,8 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Returns the number with the highest value:
-  matrix.forEach()
-
+  let matrixArr = matrix.flat();
+  return Math.max(...matrixArr);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,7 +51,8 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  // Solution code here...
+  // Need to add two of the values within the parameter: (startVal, endVal)
+  return (matrix.flat().reduce((startVal, endVal) => startVal + endVal, 0));
 };
 
 
@@ -76,7 +79,18 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
+  let newArr = [];
+  for(let i in hoursOpen){
+    // Push in loop of array in hoursOpen
+    newArr.push(0);
+  }
+  // Setting in a nested loop with 2D array.
+  for(let i in stores){
+    for(let j in stores[i]){
+      newArr.splice(j, 1, newArr[j] += stores[i][j]);
+    }
+  }
+  return newArr;
 
 };
 
@@ -91,7 +105,18 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let newArr = [];
+  // Create a loop for the hours array
+  for(let i in hours){
+    // Display The object list with display of cookies and time.
+    let thisHour = {
+      sales: `${data[i]} cookies`,
+      time: hours[i]
+    };
+    // Pushing in the object into the new array.
+    newArr.push(thisHour);
+  }
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,7 +141,18 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  // setting the initial value to 0, then implement new value within the block of code.
+  let amount = 0;
+  // Creating another nested loop with 2D array
+  for(let i in arr){
+    for(let j in arr[i].items){
+      if(arr[i].items[j].name === 'Treats'){
+        amount = arr[i].items[j].quantity;
+      }
+    }
+  }
+  // return the quantity of treats you need to pick up from the pet store today from this array
+  return (amount);
 };
 
 /* ------------------------------------------------------------------------------------------------
