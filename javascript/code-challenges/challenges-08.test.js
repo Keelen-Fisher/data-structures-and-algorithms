@@ -53,7 +53,20 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
+  let answer = charArray.sort((a, b) => {
+    if (a.children.length > b.children.length) { return 1; }
+    else if (a.children.length < b.children.length) { return -1; }
+    else {
 
+      if (a.name.length > b.name.length) { return 1; }
+
+      else { return -1; }
+
+    }
+
+
+  });
+  return answer;
 };
 
 
@@ -104,9 +117,11 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  str = str.split(' ');
-  return str.filter((valut, index) => /[A-Z].*/.test(value)
-  );
+  let attachArr = str.match(/[A-Z][a-zA-Z]+/g);
+  if (attachArr === null) {
+    attachArr = [];
+  }
+  return attachArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
