@@ -18,7 +18,7 @@ Becomes:
 ]
 ------------------------------------------------------------------------------------------------ */
 
-function transformToLis(obj){
+function transformToLis(obj) {
   let transformKeys = Object.keys(obj);
   return transformKeys.map(key => {
     return `<li>${key}: ${obj[key]}</li>`;
@@ -40,7 +40,7 @@ const count = (target, input) => {
   input.map(arr => {
     arr.map(n => {
       if (n === target) {
-        number ++;
+        number++;
       }
     });
   });
@@ -77,8 +77,21 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
-const divisibleByFiveTwoToThePower = (input) =>{
+const divisibleByFiveTwoToThePower = (input) => {
 
+  let result = [];
+  let midWay = [];
+  input.forEach(arr => {
+    let newArray = arr.filter( num => {
+      return num % 5 === 0 && typeof num === 'number';
+    });
+    midWay.push(newArray);
+  });
+  midWay.forEach(arr => {
+    let powerArray = arr.map( value => Math.pow(2, value));
+    result.push(powerArray);
+  });
+  return result;
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -144,7 +157,7 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   return data.map(jedi => {
-    if (jedi.gender === 'female' || jedi.gender === 'male'){
+    if (jedi.gender === 'female' || jedi.gender === 'male') {
       return jedi.name;
     }
   }).filter(index => index !== undefined).join(' and ');
@@ -159,9 +172,9 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   let shortPerson = '';
-  let arrangedH = data.map(jed => jed.height).sort((a,b) => a -b);
+  let arrangedH = data.map(jed => jed.height).sort((a, b) => a - b);
   data.forEach(jed => {
-    if(jed.height === arrangedH[0]){
+    if (jed.height === arrangedH[0]) {
       shortPerson = jed.name;
     }
   });
@@ -181,8 +194,8 @@ Run your tests from the console: jest challenges-10.test.js
 
 describe('Testing challenge 1', () => {
   test('It should return a list of key value pairs inside of li tags', () => {
-    expect(transformToLis({name: 'bob', age: 32})[0]).toStrictEqual(`<li>name: bob</li>`);
-    expect(transformToLis({name: 'bob', age: 32})[1]).toStrictEqual(`<li>age: 32</li>`);
+    expect(transformToLis({ name: 'bob', age: 32 })[0]).toStrictEqual(`<li>name: bob</li>`);
+    expect(transformToLis({ name: 'bob', age: 32 })[1]).toStrictEqual(`<li>age: 32</li>`);
     expect(transformToLis({})).toStrictEqual([]);
   });
 });

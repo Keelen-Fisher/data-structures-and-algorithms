@@ -64,7 +64,9 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
+  let spread = /^[a-zA-Z0-9]+\.?[a-zA-Z0-9]+@[a-zA-Z0-9]+\.(net|com|org)\b/;
+  let test = spread.test(email);
+  return test;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -90,6 +92,9 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  let spread = /^(\(\d{3}\)|\d{3}) ?-?\d{3} ?-?\d{4}$/;
+  let respond = spread.test(phoneNumber);
+  return respond;
 };
 
 /* ------------------------------------------------------------------------------------------------
