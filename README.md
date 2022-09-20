@@ -23,3 +23,5 @@ To run your tests
 - Code Challenges:
 
 1. [Reverse Array](./Code-Challenges/reverseArray.md)
+
+2. [Insert Shift Array](./Code-Challenges/insertshiftArray.md)
