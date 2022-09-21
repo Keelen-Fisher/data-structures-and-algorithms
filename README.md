@@ -25,3 +25,5 @@ To run your tests
 1. [Reverse Array](./Code-Challenges/reverseArray.md)
 
 2. [Insert Shift Array](./Code-Challenges/insertshiftArray.md)
+
+3. [Array Binary Search](./Code-Challenges/array-binary-search.md)
