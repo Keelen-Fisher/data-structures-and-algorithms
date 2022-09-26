@@ -27,3 +27,7 @@ To run your tests
 2. [Insert Shift Array](./Code-Challenges/insertshiftArray.md)
 
 3. [Array Binary Search](./Code-Challenges/array-binary-search.md)
+
+4. [CHALLENGE 5: Linked List](./javascript/linked-list/LinkedList.md)
+
+5. [CHALLENGE 6: Linked List Insertion]()
