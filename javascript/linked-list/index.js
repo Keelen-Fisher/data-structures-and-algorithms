@@ -146,8 +146,8 @@ class LinkedList {
       return;
     test = this.head;
   }
-
 }
+
 let list = new LinkedList();
 console.log('empty list', list);
 
@@ -161,7 +161,7 @@ list.insert(5);
 
 list.insertBefore(3, 'A');
 list.insertAfter(1, 'A');
-
+list.kthFromLast(4, 'k');
 list.traverse();
 console.log('include result', list.includes(3));
 console.log(list.toString());
