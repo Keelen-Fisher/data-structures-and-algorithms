@@ -8,6 +8,8 @@ describe('Linked List', () => {
   let listTest = new LinkedList;
 
   it('Can successfully instantiate an empty linked list', () => {
+    expect(listTest).toBeInstanceOf(LinkedList);
+    //To be null: true or false
     expect(listTest.head).toBeNull();
   });
 
@@ -36,7 +38,7 @@ describe('Linked List', () => {
 
 
   it('Will return false when searching for a value in the linked list that does not exist ', () => {
-    listTest.insert(5);
+    listTest.insert('e');
     expect(listTest.includes()).toBeFalsy();
   });
 

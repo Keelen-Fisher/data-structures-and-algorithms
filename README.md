@@ -30,4 +30,6 @@ To run your tests
 
 4. [CHALLENGE 5: Linked List](./javascript/linked-list/LinkedList.md)
 
-5. [CHALLENGE 6: Linked List Insertion]()
+5. [CHALLENGE 6: Linked List Insertion](./javascript/linked-list/linkedListIns.md)
+
+6. [CHALLENGE 7: Linked List kth](./javascript/linked-list/linkedListkth.md)

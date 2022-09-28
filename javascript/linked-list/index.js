@@ -14,79 +14,141 @@ class LinkedList {
     this.head = null;
   }
 
+  // Traverse Function:
+  traverse() {
+    // we start traversals at the linked list head.  always
+    let current = this.head;
+    while (current) {
+      // when I traverse, I likely need to "do the thing"
+      console.log(current.value);
+      current = current.next;
+    }
+  }
+
   // Insert? Add lets you insert at the end of the list whereas instert lets you select an index first and then continue.
-  // Argument has value and it shoul return nothing.
+  // Argument has value and it should return nothing.
   // Adds new node with that value to the head of the list with an O(1) Time performance.
 
   insert(value) {
-    this.head = new Node(value, this.head);
+    // this.head = new Node(value, this.head);
+    let node = new Node(value);
+    node.next = this.head;
+    this.head = node;
   }
+
 
   // takes in an argument of value
   // Returns Booolean
   // indicates whether that value exists as a Node’s value somewhere within the list.
   // you can also do "includes", they have the same functionality
-  contains(value) {
-    let ongoing = this.head;
-    // Setting a while loop to check if ongoing position is set to an actual value.
-    while (ongoing !== null) {
-      if (ongoing.value === value) {
-        return true;
+  includes(value) {
+    let result = false;
+    let current = this.head;
+
+    while (current) {
+      if (current.value === value) {
+        result = true;
       }
-      else {
-        ongoing = ongoing.next;
-      }
+      current = current.next;
     }
-    return false;
+    return result;
   }
+
+
+  toString() {
+    let str = '';
+    let current = this.head;
+    while (current) {
+      str += `{${current.value}}`;
+      current = current.next;
+    }
+    str += 'NULL';
+    return str;
+  }
+
+
+
+
+
+
   // -------------------------------------------------------------------------------Code Challenge 06-----------------------------------------------------------------------------------------------
   // - append
   // arguments: new value
   // adds a new node with the given value to the end of the list
-  append(tail) {
-    if (tail.head) {
-      tail.value.next = null;
-    }
-    else {
-    }
-  }
+  // append(newValue) {
+  //   if (this.node) {
+  //     node.newValue.next = null;
+  //   }
+  //   else {
+  //   }
+  // }
 
   // insert before
   // arguments: value, new value
   // adds a new node with the given new value immediately before the first node that has the value specified
-  insert(value, tail) {
+  insertBefore(value, newValue) {
+    if (!this.head) {
+      throw new Error('This list is empty.');
+    }
 
+    if (this.head.value === value) {
+      this.insert(newValue);
+      return;
+    }
+
+    let current = this.head;
+    while (current) {
+      if (current.next.value === value) {
+        console.log({ current, currentNext: current.next });
+        let newNode = new Node(newValue);
+        newNode.next = current.next;
+        current.next = newNode;
+        return;
+      }
+      current = current.next;
+    }
   }
 
   // insert after
   // arguments: value, new value
   // adds a new node with the given new value immediately after the first node that has the value specified
-  insert(value, tail) {
-
-  }
-
-
-  // to string -> toString() function in JS. this contains no argument.
-  //  Returns a string representing all the values in the Linked List.
-  toString() {
-    let ongoing = this.head;
-    let string = '';
-    while (ongoing !== null) {
-      string += `{${ongoing.value}} -> `;
-      ongoing = ongoing.next;
+  insertAfter(value, newValue) {
+    if (!this.head) {
+      throw new Error('This list is empty.');
     }
-    return string + 'NULL';
+    let current = this.head;
+    while (current) {
+      if (current.value === value) {
+        let newNode = new Node(newValue);
+        newNode.next = current.next;
+        current.next = newNode;
+        return;
+      }
+      current = current.next;
+    }
   }
 }
+let list = new LinkedList();
+console.log('empty list', list);
 
-// let list = new LinkedList();
-//
-// list.insert('a');
-// list.insert('b');
-// list.insert('c');
-// list.insert('d');
-// list.insert('e');
-//
-// console.log('this is the current list', list);
-//
+// add head to list
+list.insert(1);
+list.insert(2);
+list.insert(3);
+list.insert(4);
+list.insert(5);
+
+
+list.insertBefore(3, 'A');
+list.insertAfter(1, 'A');
+
+list.traverse();
+console.log('include result', list.includes(3));
+console.log(list.toString());
+
+
+// function logger(value){
+//   console.log(`Node Value: ${value}`);
+// }
+
 module.exports = LinkedList;
