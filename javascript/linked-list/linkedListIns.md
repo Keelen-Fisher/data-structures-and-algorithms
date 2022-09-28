@@ -20,4 +20,4 @@
 
 - [Link to the linked-list folder:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/tree/main/javascript/linked-list)
 
-- [Link to the PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/27)
+- [Link to the PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/28)
