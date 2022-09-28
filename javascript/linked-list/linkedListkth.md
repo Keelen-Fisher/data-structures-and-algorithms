@@ -11,6 +11,6 @@
 
 - This approach was a little different, not yet completed and will finish in the early hour of the next day. Did research on how to implement append function into linked list, also looked up before and after insertions.
 
-- [Link to the linked-list folder:]()
+- [Link to the linked-list folder:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/tree/main/javascript/linked-list)
 
 - [Link to the PR:]()

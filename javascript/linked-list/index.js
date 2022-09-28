@@ -127,6 +127,26 @@ class LinkedList {
       current = current.next;
     }
   }
+
+  //   kth from end
+  // argument: a number, k, as a parameter.
+  // Return the node’s value that is k places from the tail of the linked list.
+  // You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+  kthFromLast(n, k) {
+    let init = 0;
+    let test = this.head;
+
+    while (test !== null) {
+      test = test.next;
+      init++;
+    }
+
+    if (init < k)
+      return;
+    test = this.head;
+  }
+
 }
 let list = new LinkedList();
 console.log('empty list', list);
