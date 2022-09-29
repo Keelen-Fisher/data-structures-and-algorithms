@@ -128,24 +128,73 @@ class LinkedList {
     }
   }
 
+  // ----------------------------------------------------------------Code Challenge 07-------------------------------------------------------------------------------------------------------------
   //   kth from end
   // argument: a number, k, as a parameter.
   // Return the node’s value that is k places from the tail of the linked list.
   // You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
-  kthFromLast(n, k) {
-    let init = 0;
-    let test = this.head;
+  kthFromEnd(n, k) {
 
-    while (test !== null) {
-      test = test.next;
-      init++;
+    let offPlace = this.head;
+    let nBehind = this.head;
+
+    for (let i = 0; i < k; i++) {
+      offPlace = offPlace.next;
+      // if logic here to create Exception
     }
-
-    if (init < k)
-      return;
-    test = this.head;
+    while (offPlace.next) {
+      offPlace = offPlace.next;
+      nBehind = nBehind.next;
+    }
+    return nBehind.value;
   }
+}
+
+//   let init = 0;
+//   let test = this.head;
+
+//   while (test !== null) {
+//     test = test.next;
+//     init++;
+//   }
+
+//   if (init < k)
+//     return;
+//   test = this.head;
+// }
+
+
+// -----------------------------------------------------Code Challenge 08----------------------------------------------------------------------------------------------------------------------------
+// Write a function called zip lists
+// Arguments: 2 linked lists
+// Return: New Linked List, zipped as noted below
+// Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the the zipped list.
+// Try and keep additional space down to O(1)
+// You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+function zippedList(LL1, LL2) {
+  let newList = new LinkedList;
+  let currentList = LL1;
+  let afterList = LL2;
+  if (LL1.head === null) {
+    currentList = LL2;
+    afterList = LL1;
+  }
+  let current = currentList.head;
+  while (LL1.head !== null || LL2.head !== null) {
+    newList.append(current.value);
+    currentList.head = currentList.head.next;
+    currentList.length--;
+    if (afterList.head !== null) {
+      current = afterList.head;
+      currentList = afterList;
+    }
+    else {
+      current = currentList.head;
+    }
+  }
+  return newList;
 }
 
 let list = new LinkedList();
@@ -158,10 +207,11 @@ list.insert(3);
 list.insert(4);
 list.insert(5);
 
-
+console.log('kthFromEnd is Working!', list.kthFromEnd());
+zippedList(1, 2, 3, 4, 5);
 list.insertBefore(3, 'A');
 list.insertAfter(1, 'A');
-list.kthFromLast(4, 'k');
+list.kthFromEnd(4, 'k');
 list.traverse();
 console.log('include result', list.includes(3));
 console.log(list.toString());

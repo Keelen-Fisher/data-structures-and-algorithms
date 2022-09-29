@@ -14,3 +14,7 @@
 - [Link to the linked-list folder:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/tree/main/javascript/linked-list)
 
 - [Link to the PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/31)
+
+- [Link to implementation of Wireframe](https://miro.com/app/board/uXjVPVbmw2E=/)
+
+- Wireframe from Code Challenge:
