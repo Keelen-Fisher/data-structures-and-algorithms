@@ -172,7 +172,6 @@ class LinkedList {
 // Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the the zipped list.
 // Try and keep additional space down to O(1)
 // You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
-
 function zippedList(LL1, LL2) {
   let newList = new LinkedList;
   let currentList = LL1;
@@ -206,6 +205,8 @@ list.insert(2);
 list.insert(3);
 list.insert(4);
 list.insert(5);
+
+
 
 console.log('kthFromEnd is Working!', list.kthFromEnd());
 zippedList(1, 2, 3, 4, 5);
