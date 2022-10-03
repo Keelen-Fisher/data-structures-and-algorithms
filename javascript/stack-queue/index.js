@@ -93,23 +93,27 @@ class Queue {
 }
 
 // Calling stack with push and pop
-const stack = new Stack();
-stack.push('A');
-stack.push('B');
-stack.push('C');
-stack.push('D');
+// const stack = new Stack();
+// stack.push('A');
+// stack.push('B');
+// stack.push('C');
+// stack.push('D');
 
-stack.pop();
-stack.pop();
+// stack.pop();
+// stack.pop();
 
 // Calling queue with enqueue and dequeue
-const queue = new Queue();
-queue.enqueue('D');
-queue.enqueue('E');
-queue.enqueue('F');
-queue.enqueue('G');
+// const queue = new Queue();
+// queue.enqueue('D');
+// queue.enqueue('E');
+// queue.enqueue('F');
+// queue.enqueue('G');
 
-queue.dequeue();
-queue.dequeue();
+// queue.dequeue();
+// queue.dequeue();
 
 
+module.exports = {
+  Stack,
+  Queue
+};
