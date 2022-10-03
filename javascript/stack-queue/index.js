@@ -92,6 +92,48 @@ class Queue {
   }
 }
 
+// -----------------------------------------------------------------------------------------------------Code Challenge 11--------------------------------------------------------------------------------------------------
+
+// Create a new class called pseudo queue.
+// Do not use an existing Queue.
+// Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
+// Internally, utilize 2 Stack instances to create and manage the queue
+
+class PseudoQueue {
+  constructor() {
+    // front
+    this.stack1 = new Stack();
+    // back
+    this.stack2 = new Stack();
+  }
+
+  //   enqueue
+  // Arguments: value
+  // Inserts value into the PseudoQueue, using a first-in, first-out approach.
+  enqueue(value) {
+    if (this.stack1.isEmpty()) {
+      this.stack1.push(value);
+      console.log('This is stack1: ', this.stack1);
+    }
+    else throw new Error('Cannot push any value into a full stack.');
+  }
+
+  //   dequeue
+  // Arguments: none
+  // Extracts a value from the PseudoQueue, using a first-in, first-out approach.
+  dequeue() {
+    if (this.stack2.isEmpty()) {
+      while (!this.stack1.isEmpty()) {
+        this.stack2.push(this.stack1.pop());
+      }
+    }
+    return this.stack2.pop();
+  }
+}
+
+const pseudoQueueTest = new PseudoQueue;
+pseudoQueueTest.enqueue('a');
+
 // Calling stack with push and pop
 // const stack = new Stack();
 // stack.push('A');
@@ -115,5 +157,6 @@ class Queue {
 
 module.exports = {
   Stack,
-  Queue
+  Queue,
+  PseudoQueue
 };
