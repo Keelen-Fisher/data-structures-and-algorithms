@@ -92,7 +92,7 @@ class Queue {
   }
 }
 
-// -----------------------------------------------------------------------------------------------------Code Challenge 11--------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------Code Challenge 11----------------------------------------------------------------------------------------------------------------
 
 // Create a new class called pseudo queue.
 // Do not use an existing Queue.
@@ -130,6 +130,66 @@ class PseudoQueue {
     return this.stack2.pop();
   }
 }
+
+
+// --------------------------------------------------------------Code Challenge 12 --------------------------------------------------------------------------------------------------------------
+
+
+class AnimalShelter {
+  constructor() {
+    this.front = null;
+    this.back = null;
+  }
+
+  enqueue(animal) {
+    let newNode = new Node(animal);
+    if (!this.front) { // if empty, create pointers
+      this.front = newNode;
+      this.back = newNode;
+
+    } else {
+      this.back.next = newNode;
+      this.back = newNode;
+    }
+    console.log(JSON.stringify(catQueue));
+    return catQueue;
+
+  }
+
+  dequeue(pref) {
+    if (this.front === null) {
+      return null;
+    }
+
+    if (this.front === this.back) { // this works
+      console.log('q only has one item', this.front);
+      this.front = null;
+      this.back = null;
+      console.log('x', catQueue);
+      return;
+    }
+
+    this.front = this.front.next;
+    console.log(catQueue);
+    return catQueue;
+
+  }
+}
+
+
+
+let dogQueue = new AnimalShelter();
+let catQueue = new AnimalShelter();
+
+catQueue.enqueue('Jimmy');
+catQueue.enqueue('Timmy');
+catQueue.enqueue('Danny');
+catQueue.dequeue();
+
+dogQueue.enqueue('Doggo');
+dogQueue.enqueue('Duke');
+dogQueue.enqueue('Lucky');
+dogQueue.dequeue();
 
 const pseudoQueueTest = new PseudoQueue;
 pseudoQueueTest.enqueue('a');

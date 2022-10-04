@@ -15,7 +15,7 @@
 <!-- Description of each method publicly available to your Stack and Queue-->
 [Link to code:](index.js)
 
-[Link to PR: ]()
+[Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/37)
 
 [Link to stack-queue folder](https://github.com/Keelen-Fisher/data-structures-and-algorithms/blob/main/javascript/stack-queue/index.js)
 
