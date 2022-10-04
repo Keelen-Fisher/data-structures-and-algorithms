@@ -37,3 +37,5 @@ To run your tests
 7. [CHALLENGE 8: Linked List Zip](./javascript//linked-list/linked-list-zip.md)
 
 8. [CHALLENGE 11: Stacks and Queues](./javascript/stack-queue/stack-and-queue.md)
+
+9. [CHALLENGE 12: Stacks and Queues](./javascript/stack-queue/stack-queue-animal-shelter.md)
