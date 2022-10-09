@@ -41,3 +41,5 @@ To run your tests
 9. [CHALLENGE 12: Stacks and Queues Animal Shelter](./javascript/stack-queue/stack-queue-animal-shelter.md)
 
 10. [CHALLENGE 13: Bracket Check For String](./javascript/stack-queue/stack-queue-brackets.md)
+
+11. [CHALLENGE 15: Trees -> Binary Tree and Search Tree](./javascript/trees/trees.md)
