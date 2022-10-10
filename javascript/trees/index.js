@@ -47,16 +47,17 @@ class BinaryTree {
     traverse(this.root);
   }
   // post order which returns an array of the values, ordered appropriately.
-  postOrder(root) {
-    let arr = [];
-    this.postFunction(root, arr);
-    return arr;
-  }
-  postFunction(root, arr) {
-    if (!root) return;
-    this.postFunction(root.left, arr);
-    this.postFunction(root.right, arr);
-    arr.push(root.value);
+  postOrder() {
+
+    // define recursive function
+    const traverse = (node) => {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      // do thing POST ORDER
+      console.log(node.value);
+    };
+    // get the recursive party started
+    traverse(this.root);
   }
 }
 
