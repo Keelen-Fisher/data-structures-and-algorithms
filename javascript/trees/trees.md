@@ -32,14 +32,14 @@
 
 ## Approach & Efficiency
 
-- After Friday's Data Structures lecture, the approach is to use the demo code and search for methods 
+- After Friday's Data Structures lecture, the approach is to use the demo code and search for methods
 
 ## API
 
 - [Link to code:](index.js)
 
-- [Link to PR:]()
+- [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/42)
 
-- [Link to trees folder]()
+- [Link to trees folder](https://github.com/Keelen-Fisher/data-structures-and-algorithms/tree/main/javascript/trees)
 
 - ![wireframe](../../Images/trees%20challenge.png)
