@@ -36,7 +36,7 @@
 
 ## API
 
-- [Link to code:](index.js)
+- [Link to code:](trees.js)
 
 - [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/42)
 
