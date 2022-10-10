@@ -36,7 +36,6 @@ class BinaryTree {
     };
     traverse(this.root);
   }
-
   // in order
   inOrder() {
     traverse = (node) => {
@@ -44,11 +43,50 @@ class BinaryTree {
       // DO THE THING IN ORDER
       console.log(node.value);
       if (node.right) traverse(node.right);
-    }
+    };
     traverse(this.root);
   }
-
   // post order which returns an array of the values, ordered appropriately.
+  postOrder(root) {
+    let arr = [];
+    this.postFunction(root, arr);
+    return arr;
+  }
+  postFunction(root, arr) {
+    if (!root) return;
+    this.postFunction(root.left, arr);
+    this.postFunction(root.right, arr);
+    arr.push(root.value);
+  }
+}
+
+// Create a Binary Search Tree class
+// This class should be a sub-class (or your languages equivalent) of the Binary Tree Class, with the following additional methods:
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+  // Add
+  // Arguments: value
+  // Return: nothing
+  // Adds a new node with that value in the correct location in the binary search tree.
+  add(value) {
+    const newNode = new Node(value);
+    if (this.root === null) {
+      this.root = newNode;
+    }
+  }
+
+  // Contains
+  // Argument: value
+  // Returns: boolean indicating whether or not the value is in the tree at least once.
+
+  // contains(value) {
+  //   is (value === null){
+  //     return true;
+  //   }
+  //   else if()
+  // }
 }
 
 let tree = new BinaryTree();
