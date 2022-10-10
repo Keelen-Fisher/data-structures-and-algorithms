@@ -2,13 +2,7 @@
 
 // Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
 
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
+ 
 
 // Binary Tree
 // Create a Binary Tree class
@@ -38,12 +32,12 @@ class BinaryTree {
   }
   // in order
   inOrder() {
-    traverse = (node) => {
+    traverse(node){
       if (node.left) traverse(node.left);
       // DO THE THING IN ORDER
       console.log(node.value);
       if (node.right) traverse(node.right);
-    };
+    }
     traverse(this.root);
   }
   // post order which returns an array of the values, ordered appropriately.
