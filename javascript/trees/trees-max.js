@@ -16,7 +16,7 @@ class BinaryTree {
     inOrdertaverse(current) {
       if (current.left){ 
         traverse(current.left);
-      }
+      } 
       if (max < current.value) {
         max = current.value;
       }
