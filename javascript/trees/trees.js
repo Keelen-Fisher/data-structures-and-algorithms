@@ -32,7 +32,7 @@ class BinaryTree {
   }
   // in order
   inOrder() {
-    traverse(node){
+    function traverse(node){
       if (node.left) traverse(node.left);
       // DO THE THING IN ORDER
       console.log(node.value);
