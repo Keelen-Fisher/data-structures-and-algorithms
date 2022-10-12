@@ -4,6 +4,8 @@ let Stack = require('../index');
 let Queue = require('../index');
 
 describe('Stack', () => {
+  let checkStack;
+
   it('Can successfully push onto a stack', () => {
     let stack = new Stack();
     console.log('checking the stack', stack);
@@ -37,20 +39,22 @@ describe('Stack', () => {
   });
 
   it('Can successfully peek the next item on the stack', () => {
-    let stack = new Stack();
     // How to successfully peek into the next item on the stack
-  });
+    let trueValue = checkStack.top.value;
+    let peek = trueValue.peek();
 
-  it ('Can successfully instantiate an empty stack', () => {
-    let stack = new Stack();
-    // How successfully instantiate an empty stack
+    expect(peek).toBe(trueValue);
   });
 
   it ('Calling pop or peek on empty stack raises exception', () => {
-    let stack = new Stack();
     // How to Call pop or peek on empty stack raises exception
-  });
 
+    checkStack.pop();
+    checkStack.pop();
+
+    expect(() => checkStack.pop()).toThrow();
+    expect(() => checkStack.peek()).toThrow();
+  });
 });
 
 describe('Queue', () => {
@@ -77,11 +81,6 @@ describe('Queue', () => {
     expect(queue.front.value).toEqual(null);
   });
 
-  it ('Can successfully peek into a queue, seeing the expected value', () => {
-    let queue = new Queue();
-    // How to peek into a queue
-  });
-
   it ('Can successfully empty a queue after multiple dequeues', () => {
     let queue = new Queue();
     queue.dequeue('A');
@@ -94,11 +93,6 @@ describe('Queue', () => {
   it ('Can successfully instantiate an empty queue', () => {
     let queue = new Queue();
     expect(queue.value).toEqual(null);
-  });
-
-  it ('Calling dequeue or peek on empty queue raises exception', () => {
-    let queue = new Queue();
-    // How to call dequeue or peek on empty queue raises exception
   });
 
 });
