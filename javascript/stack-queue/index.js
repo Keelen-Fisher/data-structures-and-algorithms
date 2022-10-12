@@ -256,7 +256,9 @@ pseudoQueueTest.enqueue('a');
 
 
 module.exports = {
+  Node,
   Stack,
   Queue,
-  PseudoQueue
+  PseudoQueue,
+  AnimalShelter
 };

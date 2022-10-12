@@ -39,3 +39,6 @@ tree.root.right.right = new Node(40);
 
 inOrderTraverse();
 
+module.exports = {
+  Node, BinaryTree
+}
