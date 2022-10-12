@@ -27,6 +27,10 @@
 
 - [Link to trees folder](https://github.com/Keelen-Fisher/data-structures-and-algorithms/tree/main/javascript/trees)
 
-- [Link to test:]()
+- [Link to test:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/blob/main/javascript/trees/__tests__/trees-max.test.js)
+
+Received Test help from Branden Ge
 
 - ![trees](../../Images/tree-max.png)
+
+- Partner: Branden Ge
