@@ -1,4 +1,4 @@
-# stack-queue-pseudo
+# stack-queue-brackets
 
 - The plan for today is to create a function that takes an string and checks for 3 types of Brackets, returns true or false depending on the string.
 
