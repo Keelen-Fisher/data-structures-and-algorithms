@@ -15,13 +15,13 @@
 <!-- Description of each method publicly available to your Stack and Queue-->
 [Link to code:](index.js)
 
-[Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/37)
+[Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/46)
 
 [Link to stack-queue folder](https://github.com/Keelen-Fisher/data-structures-and-algorithms/blob/main/javascript/stack-queue/index.js)
 
 ![Wireframe](../../Images/stacks-queues-2stacks.png)
 
-
+[Test:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/blob/main/javascript/stack-queue/__tests__/stack-queue-pseudo.test.js)
 
 - Partners
 
