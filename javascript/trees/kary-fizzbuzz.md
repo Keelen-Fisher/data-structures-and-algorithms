@@ -25,7 +25,7 @@ Determine whether or not the value of each node is divisible by 3, 5 or both. Cr
 
 - [Link to code:](tree.js)
 
-- [Link to PR:]()
+- [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/51)
 
 - [Link to trees folder](https://github.com/Keelen-Fisher/data-structures-and-algorithms/tree/main/javascript/trees)
 
