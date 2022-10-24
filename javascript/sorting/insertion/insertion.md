@@ -58,11 +58,10 @@ Then, consider stepping though the other inputs below:
 
 ## Big Oh
 
-- In terms of time complexity, this would be of `O(n)`. It depends on the length of the array, more elements can be pushed into the array n number of times making the complexity of its time to O(n).
+- In terms of time complexity, this would be of `O(n)/O(n^2)`. It depends on the length of the array, more elements can be pushed into the array n number of times making the complexity of its time to O(n).
 
 - In terms of space complexity, this would be `O(1)`, meaning that that data is stable and consistent. Despite the possibility of data itself expanding, within the array of insertion this will not leave the array unstable. To extend on that matter, insertion sort is adaptive in nature.
 
 ## [Actual Code]()
 
 ## [Tests]()
-
