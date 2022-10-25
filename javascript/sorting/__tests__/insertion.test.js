@@ -1,6 +1,6 @@
 'use strict';
 
-const insert = require('../insertion/index');
+const insert = require('../../insertion/index');
 
 describe('Insertion Sort Test', () => {
   it('Can Loop though an array and sort', () => {
