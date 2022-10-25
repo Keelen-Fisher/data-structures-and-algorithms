@@ -17,3 +17,5 @@ function insertionSort(arr){
 
 insertionSort(arr);
 console.log(arr);
+
+module.exports = insertionSort;
