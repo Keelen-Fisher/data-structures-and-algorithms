@@ -18,72 +18,72 @@ const standings = [
 
 
 // Complete for Code Challenge 28
-function sortYear(arr) {
-  for (let i = 1; i < arr.length; i++) {
+function sortYear(movies) {
+  for (let i = 1; i < movies.length; i++) {
     let j = i - 1;
-    let temp = arr[i];
-    while (j >= 0 && arr[j].year > temp.year) {
-      arr[j + 1] = arr[j];
+    let temp = movies[i];
+    while (j >= 0 && movies[j].year > temp.year) {
+      movies[j + 1] = movies[j];
       j--;
     }
-    arr[j + 1] = temp;
+    movies[j + 1] = temp;
   }
-  return arr;
+  return movies;
 }
 
 
-function sortTitle(arr) {
+function sortTitle(movies) {
 
-  for (let i = 1; i < arr.length; i++) {
+  for (let i = 1; i < movies.length; i++) {
     let j = i - 1;
-    let temp = arr[i];
-    while (j >= 0 && arr[j].title > temp.title) {
-      if (arr[j].title.includes('The')) {
-        arr[j].title = arr[j].title.replace('The ', '');
+    let temp = movies[i];
+    while (j >= 0 && movies[j].title > temp.title) {
+      if (movies[j].title.includes('The')) {
+        movies[j].title = movies[j].title.replace('The ', '');
       }
-      if (arr[j + 1].title.includes('The')) {
-        arr[j + 1].title = arr[j + 1].title.replace('The ', '');
+      if (movies[j + 1].title.includes('The')) {
+        movies[j + 1].title = movies[j + 1].title.replace('The ', '');
       }
-      arr[j + 1] = arr[j];
+      movies[j + 1] = movies[j];
       j--;
     }
-    arr[j + 1] = temp;
+    movies[j + 1] = temp;
   }
-  return arr;
+  return movies;
 }
 
-function inGenre(arr, genres) {
+function inGenre(movies, genres) {
 
-  let genresArr = [];
+  let genresMovies = [];
 
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i].genres.includes(genres)) {
-      genresArr.push(arr[i]);
+  for (let i = 1; i < movies.length; i++) {
+    if (movies[i].genres.includes(genres)) {
+      genresMovies.push(movies[i]);
     }
   }
 
 
-  for (let i = 1; i < genresArr.length; i++) {
+  for (let i = 1; i < genresMovies.length; i++) {
     let j = i - 1;
-    let temp = genresArr[i];
+    let temp = genresMovies[i];
 
-    if (genresArr[j].title.includes('The')) {
-      genresArr[j].title = genresArr[j].title.replace('The ', '');
+    if (genresMovies[j].title.includes('The')) {
+      genresMovies[j].title = genresMovies[j].title.replace('The ', '');
     }
 
-    if (genresArr[j + 1].title.includes('The')) {
-      genresArr[j + 1].title = genresArr[j + 1].title.replace('The ', '');
+    if (genresMovies[j + 1].title.includes('The')) {
+      genresMovies[j + 1].title = genresMovies[j + 1].title.replace('The ', '');
     }
 
-    while (j >= 0 && genresArr[j].title > temp.title) {
+    while (j >= 0 && genresMovies[j].title > temp.title) {
       console.log('INSIDE THE WHILE LOOP');
 
-      genresArr[j + 1] = genresArr[j];
+      genresMovies[j + 1] = genresMovies[j];
       j--;
     }
-    genresArr[j + 1] = temp;
+    genresMovies[j + 1] = temp;
   }
-  return genresArr;
+  return genresMovies;
 }
 
 module.exports = { sortYear, sortTitle, inGenre };
