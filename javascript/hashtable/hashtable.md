@@ -33,11 +33,11 @@ The approach is to apply the notes and lecture given by the instructor to create
 
 - [Link to code:](index.js)
 
-- [Link to PR:]()
+- [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/58)
 
 - [Link to trees folder](https://github.com/Keelen-Fisher/data-structures-and-algorithms/tree/main/javascript/hashtable)
 
-- [Link to test:]()
+- [Link to test:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/blob/main/javascript/hashtable/__tests__/hashtable.test.js)
 
 - ![UML](assets/HashTable%20Notes%20.png)
 
