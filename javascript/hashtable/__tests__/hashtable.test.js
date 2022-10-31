@@ -9,7 +9,7 @@
 // Successfully hash a key to an in-range value
 
 
-const HashTable = require('../index.js');
+const HashTable = require('../HashCode/hashtable.js');
 
 describe('HashTable Implementation:', () => {
   let testHash = new HashTable(1024);

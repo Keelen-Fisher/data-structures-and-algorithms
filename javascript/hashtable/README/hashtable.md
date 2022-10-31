@@ -31,7 +31,7 @@
 
 The approach is to apply the notes and lecture given by the instructor to create a fully fledged Hash Table.
 
-- [Link to code:](index.js)
+- [Link to code:](../HashCode/hashtable.js)
 
 - [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/58)
 
@@ -39,7 +39,7 @@ The approach is to apply the notes and lecture given by the instructor to create
 
 - [Link to test:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/blob/main/javascript/hashtable/__tests__/hashtable.test.js)
 
-- ![UML](assets/HashTable%20Notes%20.png)
+- ![UML](../assets/HashTable%20Notes%20.png)
 
 ## Big Oh Based on the operations
 
