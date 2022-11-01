@@ -7,17 +7,32 @@ class HashTableMap {
     this.size = size;
     this.buckets = new LinkedList(size);
   }
+  removePunctuation(string) {
+    let regex = /[!"#$&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
 
-  repeatedWord(s) {
-    s = 'Once upon a time, there was a brave princess who...';
-    const string = s.split(/\W+/g);
-    console.log(string);
-    return string.find((word, index) =>
-      string.slice(0, index).includes(word)
-    );
+    return string.replace(regex, '');
   }
-}
 
+
+  repeatedWord() {
+    // s = 'Once upon a time, there was a brave princess who...';
+    
+/* Calling the removePunctuation function and assigning the result to the variable changeString. */
+    let changeString = this.removePunctuation();
+    let smallString = changeString.toLowerCase();
+    let mapWord = new Map();
+    for (let i of smallString('')) {
+      if (mapWord.has(i)) {
+        mapWord.set(i, mapWord.get(i) + 1);
+      }
+      else mapWord.set(i, 1);
+      if (mapWord.get(i) > 1)
+        return i;
+    }
+    return 'No repeated word';
+  }
+  console.log()
+}
 
 
 module.exports = HashTableMap;

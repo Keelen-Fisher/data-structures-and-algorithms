@@ -29,12 +29,8 @@
 
 - [Link to code:](../HashCode/hashRepeat.js)
 
-- [Link to PR:]()
+- [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/60)
 
-- [Link to HashCode Folder]()
+- [Link to HashCode Folder](https://github.com/Keelen-Fisher/data-structures-and-algorithms/tree/main/javascript/hashtable/HashCode)
 
 - [Link to test:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/blob/main/javascript/hashtable/__tests__/hashRepeat.test.js)
-
-## Big Oh Based on the operations
-
-- 
