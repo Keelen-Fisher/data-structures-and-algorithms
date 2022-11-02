@@ -10,6 +10,10 @@
 
 - Using your Hashmap implementation as a part of your algorithm, return a set of values found in both trees.
 
+## Approach & Efficiency
+
+Time complexity - Linear O(n) Space complexity - Linear O(n)
+
 ## API
 
 The approach is to apply the notes and lecture given by the instructor to create a fully fledged Hash Table. In addition, apply resources gained from research to find common values between 2 binary trees.
