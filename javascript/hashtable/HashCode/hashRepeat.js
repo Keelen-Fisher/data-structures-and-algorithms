@@ -16,8 +16,8 @@ class HashTableMap {
 
   repeatedWord() {
     // s = 'Once upon a time, there was a brave princess who...';
-    
-/* Calling the removePunctuation function and assigning the result to the variable changeString. */
+
+    /* Calling the removePunctuation function and assigning the result to the variable changeString. */
     let changeString = this.removePunctuation();
     let smallString = changeString.toLowerCase();
     let mapWord = new Map();
@@ -31,7 +31,6 @@ class HashTableMap {
     }
     return 'No repeated word';
   }
-  console.log()
 }
 
 
