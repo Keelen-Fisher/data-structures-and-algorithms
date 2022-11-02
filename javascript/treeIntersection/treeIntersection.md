@@ -23,5 +23,3 @@ The approach is to apply the notes and lecture given by the instructor to create
 - [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/58)
 
 - [Link to test:](../treeIntersection/__tests__/tree-intersection.test.js)
-
-

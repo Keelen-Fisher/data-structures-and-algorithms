@@ -5,7 +5,7 @@ const { LinkedList } = require('../../linked-list/index');
 class HashTable {
   constructor(size) {
     this.size = size;
-    this.buckets = new LinkedList(size);
+    this.table = new Array(size);
   }
 
   hash(key) {
@@ -19,41 +19,48 @@ class HashTable {
   }
 
   set(key, value) {
-    let position = this.hash(key);
-    // allows me to create a property dynamically from some variable
-    this.buckets[position] = [key, value];
-    this.size++;
+    let bucket = this.table[this.hash(key)];
+    if (bucket === undefined) {
+      bucket = new LinkedList();
+      this.table[this.hash(key)] = bucket;
+    }
+    bucket.insert({ [key]: value });
   }
 
   get(key) {
-    //your code will look different here!!
-    let position = this.hash(key);
-    return this.bucket[position];
-
-  }
-
-  has(key) {
-    let position = this.hash(key);
-    if (this.buckets[position]) {
-      let bucket = this.buckets[position];
-      let current = bucket.head.value;
-      while (!current[key]) {
-        if (current.next === null) return false;
-        current = current.next;
+    const bucket = this.table[this.hash(key)];
+    if (bucket) {
+      let current = bucket.head;
+      while (current) {
+        const value = current.value[key];
+        if (value !== undefined) {
+          return value;
+        }
+        else {
+          current = current.next;
+        }
       }
-      return true;
+      return null;
     }
   }
 
+  has(key) {
+    return this.key().has(key);
+  }
+
   keys() {
-    let presentHash = this.buckets.filter((bucket) => Boolean(bucket));
-    let arrayKey = [];
-    presentHash.forEach((linkedList) =>
-    {
-      linkedList.traverse((node) =>
-        arrayKey.push(Object.arrayKey(node)[0]));
+    const keys = new Set();
+    this.table.forEach((bucket) => {
+      if (bucket) {
+        let current = bucket.head;
+        while (current) {
+          keys.add(Object.keys(current.value)[0]);
+          current = current.next;
+        }
+      }
     });
-    return arrayKey;
+    return keys;
+
   }
 }
 
