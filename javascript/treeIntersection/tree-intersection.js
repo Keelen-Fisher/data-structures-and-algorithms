@@ -2,6 +2,15 @@
 
 let arr1 = [];
 let arr2 = [];
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
 class BinaryTree {
   constructor() {
     this.root = null;
@@ -10,23 +19,31 @@ class BinaryTree {
   inOrder1() {
     function traverse(node) {
       if (node.left) traverse(node.left);
-      arr1.push(node);
+      arr1.push(node.value);
       if (node.right) traverse(node.right);
-      arr1.push(node);
+      arr1.push(node.value);
     }
     traverse(this.root);
+    return arr1;
   }
 
   inOrder2() {
     function traverse(node) {
       if (node.left) traverse(node.left);
-      arr2.push(node);
+      arr2.push(node.value);
       if (node.right) traverse(node.right);
-      arr2.push(node);
+      arr2.push(node.value);
     }
     traverse(this.root);
+    return arr2;
+  }
+
+  treeIntersection(tree1, tree2){
+    this.inOrder1(tree1);
+    this.inOrder2(tree2);
   }
 }
+
 
 
 
