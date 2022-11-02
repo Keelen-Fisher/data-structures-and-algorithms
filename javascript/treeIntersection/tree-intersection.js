@@ -1,7 +1,6 @@
 'use strict';
+const HashTable = require('../hashtable/HashCode/hashtable');
 
-let arr1 = [];
-let arr2 = [];
 
 class Node {
   constructor(value) {
@@ -11,7 +10,7 @@ class Node {
   }
 }
 
-class BinaryTree {
+class BinaryTreeHash {
   constructor() {
     this.root = null;
   }
@@ -19,35 +18,52 @@ class BinaryTree {
   inOrder1() {
     function traverse(node) {
       if (node.left) traverse(node.left);
-      arr1.push(node.value);
       if (node.right) traverse(node.right);
-      arr1.push(node.value);
     }
     traverse(this.root);
-    return arr1;
+
   }
 
   inOrder2() {
     function traverse(node) {
       if (node.left) traverse(node.left);
-      arr2.push(node.value);
       if (node.right) traverse(node.right);
-      arr2.push(node.value);
     }
     traverse(this.root);
-    return arr2;
+
   }
 
-  treeIntersection(tree1, tree2){
-    this.inOrder1(tree1);
-    this.inOrder2(tree2);
+  // updated code
+  treeSet(tree) {
+    const hashSet = new HashTable();
+    tree.inOrder1((value) => {
+      hashSet.set(value, true);
+    });
+    return hashSet;
   }
+
+  checkTreeFunction(tree, hashSet) {
+    const arr = [];
+
+    tree.inOrder1((value) => {
+      if (hashSet.get(value)) {
+        arr.push(value);
+      }
+    });
+    return arr;
+  }
+
+  /*taking in two trees and returning an array of values that are in both trees. */
+  treeIntersection(tree1, tree2) {
+    const hashSet = this.treeSet(tree1);
+    const addArray = this.checkTreeFunction(tree2, hashSet);
+    return addArray;
+  }
+
+
 }
 
-
-
-
-let tree1 = new BinaryTree();
+let tree1 = new BinaryTreeHash();
 tree1.root = new Node(150);
 tree1.root.left = new Node(100);
 tree1.root.right = new Node(250);
@@ -60,7 +76,7 @@ tree1.root.left.right.right = new Node(175);
 tree1.root.right.right.left = new Node(300);
 tree1.root.right.right.right = new Node(500);
 
-let tree2 = new BinaryTree();
+let tree2 = new BinaryTreeHash();
 tree2.root = new Node(42);
 tree2.root.left = new Node(100);
 tree2.root.right = new Node(600);
@@ -76,3 +92,4 @@ tree2.root.right.right.right = new Node(500);
 
 
 
+module.exports = { BinaryTreeHash };
