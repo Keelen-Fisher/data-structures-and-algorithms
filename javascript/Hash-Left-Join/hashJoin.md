@@ -28,6 +28,6 @@ Time complexity - Linear O(n) Space complexity - Linear O(n)
 
 - [Link to code:](../Hash-Left-Join/index.js)
 
-- [Link to PR:]()
+- [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/65)
 
 - [Link to test:](../Hash-Left-Join/__tests__/hashJoin.test.js)
