@@ -20,11 +20,11 @@
 
 Build a method that takes in 2 hash maps as a parameter. Then create a list and iterate through each hashmap and then compare the keys only if it matches.
 
-Time complexity - Linear O(n) Space complexity - Linear O(n)
+- Time complexity - Linear O(n): Depending on the size of the first input hashmap, if it's larger than normal then the function will take longer to export.
+
+- Space complexity - Linear O(n): Depending on the size of the first input hashmap.
 
 ## API
-
-## UML
 
 - [Link to code:](../Hash-Left-Join/index.js)
 
