@@ -28,6 +28,6 @@ Build a method that takes in 2 hash maps as a parameter. Then create a list and 
 
 - [Link to code:](../Hash-Left-Join/index.js)
 
-- [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/65)
+- [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/67)
 
 - [Link to test:](../Hash-Left-Join/__tests__/hashJoin.test.js)
