@@ -13,15 +13,15 @@ class BinaryTree {
   }
   findMax() {
     let max = -Infinity;
-    inOrdertaverse(current) {
-      if (current.left){ 
+    function inOrdertaverse(current) {
+      if (current.left) {
         traverse(current.left);
-      } 
+      }
       if (max < current.value) {
         max = current.value;
       }
       if (current.right) {
-      traverse(current.right);
+        traverse(current.right);
       }
     }
     inOrderTraverse();
