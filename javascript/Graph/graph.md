@@ -38,9 +38,9 @@
 
 Build functions that classifies the essentials of what a graph may produce in data structures and test all of its functionality to ensure that it returns what is decided.
 
-- Time complexity
+- Time complexity O(1)
 
-- Space Complexity
+- Space Complexity O(1)
 
 ## API
 
