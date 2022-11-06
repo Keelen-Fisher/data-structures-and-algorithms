@@ -46,7 +46,7 @@ Build functions that classifies the essentials of what a graph may produce in da
 
 - [Link to Code:](../Graph/graph.js)
 
-- [Link to PR:]()
+- [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/70)
 
 - [Link to Test:](../Graph/__tests__/graphs.test.js)
 
