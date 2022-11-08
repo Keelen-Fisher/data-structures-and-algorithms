@@ -29,7 +29,7 @@ In the test we will use jest and call the file that contains the function, creat
 
 - NOTE: The breadthFirst function is already established in the graph.js file from yesterday's code challenge. This function will apply to today's code challenge. Function declaration starts at line 75.
 
-- [Link to PR:]()
+- [Link to PR:](https://github.com/Keelen-Fisher/data-structures-and-algorithms/pull/73)
 
 - [Link to Test:](../Graph/__tests__/graph-breadth-first.test.js)
 
@@ -39,4 +39,4 @@ In the test we will use jest and call the file that contains the function, creat
 
 ## Resources and Credit
 
-[Link to Graph BFS and DFS Data Structures in js:](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://www.sfu.ca/~arashr/parminder.pdf)
+- [Link to Graph BFS and DFS Data Structures in js:](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://www.sfu.ca/~arashr/parminder.pdf)
