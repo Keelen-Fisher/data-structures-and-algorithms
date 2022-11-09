@@ -72,28 +72,26 @@ class Graph {
   }
 
   depthFirst(root, callback) {
-    const stack = [root];
-    const visited = new Set();
-    visited.add(root);
+    const rootStack = [root];
+    const checked = new Set();
+    checked.add(root);
     let current = null;
 
-    while (stack.length) {
-      current = stack.pop();
+    while (rootStack.length) {
+      current = rootStack.pop();
 
-      // do something if we want
       if (callback) callback(current.value);
 
-      // grab neighbors?
       const neighbors = this.getNeighbors(current);
       for (let edge of neighbors) {
-        if (!visited.has(edge.vertex)) {
-          visited.add(edge.vertex);
-          stack.push(edge.vertex);
+        if (!checked.has(edge.vertex)) {
+          checked.add(edge.vertex);
+          rootStack.push(edge.vertex);
         }
       }
     }
 
-    return visited;
+    return checked;
   }
 }
 
