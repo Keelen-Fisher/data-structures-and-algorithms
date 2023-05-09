@@ -10,6 +10,10 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 
 const addOne = (arr) => {
   let newArray = [];
+  /* `arr.forEach()` is a method that loops through each element of an array and executes a callback
+  function for each element. In this case, the callback function takes two parameters: `value` and
+  `index`. `value` represents the current element being processed, and `index` represents the index
+  of the current element. */
   arr.forEach(function(value, index){
     newArray.push(value + 1);
   });
@@ -93,8 +97,27 @@ const addValues = (arr, value) => {
   arr.push(value);
 };
 
+/**
+ * The function adds a given number to an array a specified number of times using a callback function.
+ * @param num - The `num` parameter is a number that will be added to the elements of the `arr` array.
+ * @param arr - an array of numbers that will be modified by the function
+ * @param times - `times` is a parameter that represents the number of times the `callback` function
+ * should be called in the `addNumbers` function.
+ * @param callback - The `callback` parameter is a function that will be called repeatedly in the
+ * `addNumbers` function. It takes two arguments: an array and a number. The purpose of the `callback`
+ * function is to perform some operation on the array and the number, and then return the modified
+ * array.
+ * @returns the `arr` parameter after it has been modified by the `callback` function `times` number of
+ * times.
+ */
 const addNumbers = (num, arr, times, callback) => {
   for (let i = 0; i < times; i++){
+    /* `callback(arr, num)` is invoking the callback function that is passed as an argument to the
+    `addNumbers` function. The `callback` function takes two parameters: an array and a number. In
+    this case, `arr` is the array that is passed as an argument to the `addNumbers` function, and
+    `num` is the number that is also passed as an argument to the `addNumbers` function. The purpose
+    of the `callback` function is to perform some operation on the array and the number, and then
+    return the modified array. */
     callback(arr, num);
   }
   return arr;
